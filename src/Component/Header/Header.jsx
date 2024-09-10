@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
   return (
@@ -34,11 +36,12 @@ const Header = () => {
             <input
               class="form-control me-2"
               type="search"
-              placeholder="Search"
-              aria-label="Search"
-            ></input>
+              placeholder="Recherche"
+              aria-label="Recherche">
+            </input>
             <button class="btn btn-outline-success" type="submit">
-              Search
+              {/*Balise pour l'icone loupe du bouton de recherche */}
+              <FontAwesomeIcon icon={faSearch} />
             </button>
           </form>
         </div>

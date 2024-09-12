@@ -1,1 +1,6 @@
-$primary-color: #000;
+@font-face {
+  font-family: "Graphik";
+  src: url("../public/assets/font/Graphik-Regular.woff") format("woff"), url("../public/assets/font/Graphik-Bold.woff") format("woff"), url("../public/assets/font/Graphik-Light.woff") format("woff");
+}
+
+/*# sourceMappingURL=App.css.map */

@@ -1,5 +1,8 @@
 nav {
   background-color: #f1f8fc;
+  font-family: "Graphik";
+  font-size: 1rem;
+  font-weight: normal;
 }
 nav .logo-tta {
   width: 100px;

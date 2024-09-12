@@ -1,0 +1,18 @@
+nav {
+  background-color: #f1f8fc;
+}
+nav .logo-tta {
+  width: 100px;
+  height: auto;
+}
+nav .nav-link {
+  color: #0074c7;
+}
+nav .nav-link.active {
+  color: #384050;
+}
+nav .navbar-toggler {
+  color: #0074c7;
+}
+
+/*# sourceMappingURL=Header.css.map */

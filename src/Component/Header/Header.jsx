@@ -1,45 +1,57 @@
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faSearch, faBars } from "@fortawesome/free-solid-svg-icons";
+import "./Header.css";
 
 const Header = () => {
   return (
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <Link class="navbar-brand" to="/">
-          <img src="/assets/Logo.png" alt="Logo du site" />
+    <nav className="navbar navbar-expand-lg border-bottom">
+      <div className="container">
+        <Link className="navbar-brand" to="/">
+          <img src="/assets/header/Logo.png" className="logo-tta" alt="Logo du site" />
         </Link>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <Link class="nav-link active" aria-current="page" to="/batiment">
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <FontAwesomeIcon icon={faBars} />
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav ms-auto">
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/batiment">
                 Bâtiment
-              </Link>
+              </NavLink>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link active" to="/service">
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/service">
                 Services
-              </Link>
+              </NavLink>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link active" to="/fabrication">
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/fabrication">
                 Fabrications
-              </Link>
+              </NavLink>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link active" to="/alimentation">
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/alimentation">
                 Alimentation
-              </Link>
+              </NavLink>
             </li>
           </ul>
-          <form class="d-flex">
+          <form className="d-flex">
             <input
-              class="form-control me-2"
+              className="form-control me-2"
               type="search"
               placeholder="Recherche"
-              aria-label="Recherche">
-            </input>
-            <button class="btn btn-outline-success" type="submit">
+              aria-label="Recherche"
+            ></input>
+            <button className="btn btn-outline-primary" type="submit">
               {/*Balise pour l'icone loupe du bouton de recherche */}
               <FontAwesomeIcon icon={faSearch} />
             </button>

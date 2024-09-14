@@ -6,7 +6,7 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <div className="container">
-      <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 my-4">
+      <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 my-3">
       <ul className="list-unstyled">
           <li className="nav-item mb-2">
             <NavLink

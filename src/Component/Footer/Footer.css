@@ -1,0 +1,24 @@
+footer {
+  background-color: #0074c7;
+  font-family: "Graphik", sans-serif;
+  font-size: 0.7rem;
+  font-weight: normal;
+}
+footer p {
+  color: #f1f8fc;
+}
+footer .footer-link {
+  color: #f1f8fc;
+  text-decoration: none;
+}
+footer .footer-link.active {
+  color: #384050;
+}
+footer .footer-link:hover {
+  color: #384050;
+}
+footer address {
+  color: #f1f8fc;
+}
+
+/*# sourceMappingURL=Footer.css.map */

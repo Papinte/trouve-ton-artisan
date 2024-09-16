@@ -1,0 +1,38 @@
+// Variables pour les breakpoints Bootstrap
+$breakpoint-sm: 576px;  // Mobile
+$breakpoint-md: 768px;  // Tablette
+$breakpoint-lg: 992px;  // Desktop
+
+$primary-color: #384050;
+main{
+  h1{
+    color: $primary-color;
+  }
+  h2{
+    color: $primary-color;
+  }
+  .card {
+    background-color: #f1f8fc;
+    box-shadow: 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    border: none;
+  
+    .card-title {
+      // Taille par défaut (mobile)
+      font-size: 16px;
+      color: #00497c;
+    
+      // À partir de tablette (>= 768px)
+      @media (min-width: $breakpoint-md) {
+        font-size: 20px;
+      }
+    
+      // À partir de desktop (>= 992px)
+      @media (min-width: $breakpoint-lg) {
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+

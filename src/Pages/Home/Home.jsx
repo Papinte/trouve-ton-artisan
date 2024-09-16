@@ -12,7 +12,7 @@ const Home = () => {
         <h1 className="my-4 text-center">Comment trouver mon artisan ?</h1>
         <div className="row">
           {/* Card 1 */}
-          <div className="col-12 col-md-6 col-lg-3 mb-3">
+          <div className="col-12 col-md-6 col-lg-6 mb-3">
             <div className="card h-100">
               <div className="row g-0">
                 <div className="col-3 col-md-4">
@@ -34,7 +34,7 @@ const Home = () => {
           </div>
 
           {/* Card 2 */}
-          <div className="col-12 col-md-6 col-lg-3 mb-3">
+          <div className="col-12 col-md-6 col-lg-6 mb-3">
             <div className="card h-100">
               <div className="row g-0">
                 <div className="col-3 col-md-4">
@@ -54,7 +54,7 @@ const Home = () => {
           </div>
 
           {/* Card 3 */}
-          <div className="col-12 col-md-6 col-lg-3 mb-3">
+          <div className="col-12 col-md-6 col-lg-6 mb-3">
             <div className="card h-100">
               <div className="row g-0">
                 <div className="col-3 col-md-4">
@@ -76,7 +76,7 @@ const Home = () => {
           </div>
 
           {/* Card 4 */}
-          <div className="col-12 col-md-6 col-lg-3 mb-3">
+          <div className="col-12 col-md-6 col-lg-6 mb-3">
             <div className="card h-100">
               <div className="row g-0">
                 <div className="col-3 col-md-4">
@@ -99,7 +99,7 @@ const Home = () => {
         </div>
         <h2 className="my-4 text-center">Les artisans du mois</h2>
       </main>
-      <div className="col-12 col-md-6 col-lg-3 mb-3">
+      <div className="col-12 col-md-6 col-lg-6 mb-3">
             <div className="card h-100">
               <div className="row g-0">
                 <div className="col-3 col-md-4">

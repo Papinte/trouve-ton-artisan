@@ -1,0 +1,99 @@
+$primary-color: #384050;
+$secondary-color: #0074c7;
+
+//css général
+main {
+  h1 {
+    color: $primary-color;
+  }
+  h2 {
+    color: $primary-color;
+  }
+  p {
+    color: #00497c;
+  }
+  .btn:hover {
+    background-color: $primary-color;
+    color: #f1f8fc;
+  }
+}
+// Style css pour taille d'écran de minimum 993 pixels
+@media (min-width: 993px) {
+  h1 {
+    font: {
+      weight: bold;
+      size: 3rem;
+    }
+  }
+  p {
+    font: {
+      size: 2rem;
+    }
+  }
+  .outil-img {
+    max-width: 600px;
+  }
+  .btn {
+    background-color: $secondary-color;
+    color: #f1f8fc;
+    padding: 10px 30px;
+    font-size: 1.25rem;
+  }
+}
+
+// Style Css pour taille d'écran maximum de 992 pixels
+@media (max-width: 992px) {
+  h1 {
+    font: {
+      weight: bold;
+      size: 2rem;
+    }
+  }
+  h2 {
+    font: {
+        size: 1.5rem;
+    }
+  }
+  p {
+    font: {
+      size: 1.5rem;
+    }
+  }
+  .outil-img {
+    max-width: 400px;
+  }
+  .btn {
+    background-color: $secondary-color;
+    color: #f1f8fc;
+    padding: 8px 16px;
+    font-size: 1rem;
+  }
+}
+
+//Style css pour taille d'écran maximum de 768 px
+@media (max-width: 768px) {
+  h1 {
+    font: {
+      weight: bold;
+      size: 2rem;
+    }
+  }
+  h2 {
+    font: {
+        size: 1.5rem;
+    }
+  }
+  p {
+    font: {
+      size: 1rem;
+    }
+  }
+
+  .outil-img {
+    max-width: 300px;
+  }
+  .btn {
+    padding: 6px 12px;
+    font-size: 0.875rem;
+  }
+}

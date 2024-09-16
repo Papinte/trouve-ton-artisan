@@ -61,7 +61,7 @@ const Home = () => {
                   <img
                     src="/assets/home/Courrier.png"
                     className="img-fluid"
-                    alt="..."
+                    alt="Enveloppe qui s'envole"
                   />
                 </div>
                 <div className="col-9 col-md-8 d-flex align-items-center">
@@ -83,7 +83,7 @@ const Home = () => {
                   <img
                     src="/assets/home/Reponse.png"
                     className="img-fluid"
-                    alt="..."
+                    alt="Deux bulles de conversation, avec la question et la réponse"
                   />
                 </div>
                 <div className="col-9 col-md-8 d-flex align-items-center">

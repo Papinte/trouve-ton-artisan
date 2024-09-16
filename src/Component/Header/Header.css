@@ -1,12 +1,8 @@
 nav {
   background-color: #f1f8fc;
-  font-family: "Graphik";
+  font-family: "Graphik", serif;
   font-size: 1rem;
   font-weight: normal;
-}
-nav .logo-tta {
-  width: 100px;
-  height: auto;
 }
 nav .nav-link {
   color: #0074c7;
@@ -16,6 +12,25 @@ nav .nav-link.active {
 }
 nav .navbar-toggler {
   color: #0074c7;
+}
+
+@media (min-width: 993px) {
+  .logo-tta {
+    width: 180px;
+    height: auto;
+  }
+}
+@media (max-width: 992px) {
+  .logo-tta {
+    width: 140px;
+    height: auto;
+  }
+}
+@media (max-width: 768px) {
+  .logo-tta {
+    width: 120px;
+    height: auto;
+  }
 }
 
 /*# sourceMappingURL=Header.css.map */

@@ -1,24 +1,20 @@
-import Header from "../../Component/Header/Header";
-import Footer from "../../Component/Footer/Footer";
 import React, { useState, useEffect } from "react";
-import data from "../../datas.json";
-import ArtisanCard from "../../Component/ArtisanCard/ArtisanCard";
+import ArtisanCard from "../Component/ArtisanCard/ArtisanCard";
+import data from "../datas.json";
 
-const Alimentation = () => {
+const CategoryPage = ({ category }) => {
   const [artisans, setArtisans] = useState([]);
 
   useEffect(() => {
-    const filteredArtisans = data.filter(artisan => artisan.category === 'Alimentation');
+    // Filtrer les artisans par catégorie
+    const filteredArtisans = data.filter(
+      (artisan) => artisan.category === category
+    );
     setArtisans(filteredArtisans);
-  }, []);
+  }, [category]);
   return (
-    <div>
-      <header>
-        <Header />
-      </header>
-      <main>
-        <h1>Alimentation</h1>
-        <div className="row">
+    <div className="container">
+      <div className="row">
         {artisans.length > 0 ? (
           artisans.map((artisan) => (
             <div className="col-md-4" key={artisan.id}>
@@ -35,12 +31,8 @@ const Alimentation = () => {
           <p>Aucun artisan trouvé dans cette catégorie.</p>
         )}
       </div>
-      </main>
-      <footer>
-        <Footer />
-      </footer>
     </div>
   );
 };
 
-export default Alimentation;
+export default CategoryPage;

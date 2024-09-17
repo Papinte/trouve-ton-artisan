@@ -1,8 +1,17 @@
 import Header from "../../Component/Header/Header";
 import Footer from "../../Component/Footer/Footer";
+import ArtisanCard from "../../Component/ArtisanCard/ArtisanCard";
+import React, { useState, useEffect } from "react";
+import data from "../../datas.json";
 import "./Home.css";
 
 const Home = () => {
+  const [artisans, setArtisans] = useState([]);
+
+  // Charger les données artisanales depuis le fichier JSON (optionnel si tes données sont statiques)
+  useEffect(() => {
+    setArtisans(data);
+  }, []);
   return (
     <div>
       <header>
@@ -124,25 +133,20 @@ const Home = () => {
           </div>
           <div className="carousel-inner">
             {/* Slide du premier artisan du mois */}
-            <div className="carousel-item active">
-              <div class="card mb-3" style={{ maxwidth: "540px" }}>
-                <div class="row g-0">
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">
-                        This is a wider card with supporting text below as a
-                        natural lead-in to additional content. This content is a
-                        little bit longer.
-                      </p>
-                      <p class="card-text">
-                        <small class="text-body-secondary">
-                          Last updated 3 mins ago
-                        </small>
-                      </p>
-                    </div>
+            <div className="container">
+              <h1>Liste des Artisans</h1>
+              <div className="row">
+                {artisans.map((artisan) => (
+                  <div className="col-md-4" key={artisan.id}>
+                    <ArtisanCard
+                      name={artisan.name}
+                      specialty={artisan.specialty}
+                      note={artisan.note}
+                      location={artisan.location}
+                      about={artisan.about}
+                    />
                   </div>
-                </div>
+                ))}
               </div>
             </div>
             {/* Slide du deuxième artisan du mois */}

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import "./ArtisanCard.scss";
 
 function ArtisanCard({ category }) {
   const [artisans, setArtisans] = useState([]);
@@ -24,12 +25,12 @@ function ArtisanCard({ category }) {
           <div className="card mb-4">
             <div className="card-body">
               <h5 className="card-title">{artisan.name}</h5>
-              <p className="card-text">
-                <strong>Spécialité :</strong> {artisan.specialty} <br />
-                <strong>Note :</strong> {artisan.note} <br />
-                <strong>Location :</strong> {artisan.location} <br />
-                {artisan.about}
-              </p>
+              <article>
+                <p className="card-text"><span className="rubrique">Spécialité : </span>{artisan.specialty}</p>
+                <p className="card-text"><span className="rubrique">Note : </span>{artisan.note}</p>
+                <p className="card-text"><span className="rubrique">Location : </span>{artisan.location}</p>
+                <p className="card-text">{artisan.about}</p>
+              </article>
             </div>
           </div>
         </div>

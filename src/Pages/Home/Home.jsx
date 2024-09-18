@@ -35,7 +35,7 @@ const Home = () => {
         <div className="row">
           {/* Card 1 */}
           <div className="col-12 col-md-6 col-lg-6 mb-3">
-            <div className="card h-100">
+            <div className="card-home card h-100">
               <div className="row g-0">
                 <div className="col-3 col-md-4">
                   <img
@@ -46,7 +46,7 @@ const Home = () => {
                 </div>
                 <div className="col-9 col-md-8 d-flex align-items-center">
                   <div className="card-body">
-                    <p className="card-title">
+                    <p className="home-title-card card-title">
                       1. Choisir la catégorie d’artisanat dans le menu.
                     </p>
                   </div>
@@ -57,7 +57,7 @@ const Home = () => {
 
           {/* Card 2 */}
           <div className="col-12 col-md-6 col-lg-6 mb-3">
-            <div className="card h-100">
+            <div className="card-home card h-100">
               <div className="row g-0">
                 <div className="col-3 col-md-4">
                   <img
@@ -68,7 +68,7 @@ const Home = () => {
                 </div>
                 <div className="col-9 col-md-8 d-flex align-items-center">
                   <div className="card-body">
-                    <p className="card-title">2. Choisir un artisan</p>
+                    <p className="home-title-card  card-title">2. Choisir un artisan</p>
                   </div>
                 </div>
               </div>
@@ -77,7 +77,7 @@ const Home = () => {
 
           {/* Card 3 */}
           <div className="col-12 col-md-6 col-lg-6 mb-3">
-            <div className="card h-100">
+            <div className="card-home card h-100">
               <div className="row g-0">
                 <div className="col-3 col-md-4">
                   <img
@@ -88,7 +88,7 @@ const Home = () => {
                 </div>
                 <div className="col-9 col-md-8 d-flex align-items-center">
                   <div className="card-body">
-                    <p className="card-title">
+                    <p className="home-title-card card-title">
                       3. Le contacter via le formulaire de contact.
                     </p>
                   </div>
@@ -99,7 +99,7 @@ const Home = () => {
 
           {/* Card 4 */}
           <div className="col-12 col-md-6 col-lg-6 mb-3">
-            <div className="card h-100">
+            <div className="card-home card h-100">
               <div className="row g-0">
                 <div className="col-3 col-md-4">
                   <img
@@ -110,7 +110,7 @@ const Home = () => {
                 </div>
                 <div className="col-9 col-md-8 d-flex align-items-center">
                   <div className="card-body">
-                    <p className="card-title">
+                    <p className="home-title-card card-title">
                       4. Une réponse sera apportée sous 48h.
                     </p>
                   </div>

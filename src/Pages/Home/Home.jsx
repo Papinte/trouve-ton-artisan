@@ -1,17 +1,30 @@
 import Header from "../../Component/Header/Header";
 import Footer from "../../Component/Footer/Footer";
-import ArtisanCard from "../../Component/ArtisanCard/ArtisanCard";
-import React, { useState, useEffect } from "react";
-import data from "../../datas.json";
+import { useState, useEffect } from "react";
 import "./Home.css";
 
 const Home = () => {
-  const [artisans, setArtisans] = useState([]);
+  const [topArtisans, setTopArtisans] = useState([]);
 
-  // Charger les données artisanales depuis le fichier JSON (optionnel si tes données sont statiques)
   useEffect(() => {
-    setArtisans(data);
+    // Récupération des artisans depuis le fichier JSON
+    fetch("/datas.json")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("La réponse du réseau n'a pas abouti");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        // Filtrer les artisans avec top: true
+        const topArtisansData = data.filter((artisan) => artisan.top === true);
+        setTopArtisans(topArtisansData);
+      })
+      .catch((error) =>
+        console.error("Erreur lors de la récupération des données :", error)
+      );
   }, []);
+
   return (
     <div>
       <header>
@@ -107,117 +120,22 @@ const Home = () => {
           </div>
         </div>
         <h2 className="my-4 text-center">Les artisans du mois</h2>
-        {/*Carousel de card pour les artisans du mois */}
-        <div id="carouselExampleIndicators" className="carousel slide">
-          <div className="carousel-indicators">
-            <button
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="0"
-              className="active"
-              aria-current="true"
-              aria-label="Slide 1"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="1"
-              aria-label="Slide 2"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="2"
-              aria-label="Slide 3"
-            ></button>
-          </div>
-          <div className="carousel-inner">
-            {/* Slide du premier artisan du mois */}
-            <div className="container">
-              <h1>Liste des Artisans</h1>
-              <div className="row">
-                {artisans.map((artisan) => (
-                  <div className="col-md-4" key={artisan.id}>
-                    <ArtisanCard
-                      name={artisan.name}
-                      specialty={artisan.specialty}
-                      note={artisan.note}
-                      location={artisan.location}
-                      about={artisan.about}
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-            {/* Slide du deuxième artisan du mois */}
-            <div className="carousel-item">
-              <div class="card mb-3" style={{ maxwidth: "540px" }}>
-                <div class="row g-0">
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">
-                        This is a wider card with supporting text below as a
-                        natural lead-in to additional content. This content is a
-                        little bit longer.
-                      </p>
-                      <p class="card-text">
-                        <small class="text-body-secondary">
-                          Last updated 3 mins ago
-                        </small>
-                      </p>
-                    </div>
-                  </div>
+        <div className="row">
+          {topArtisans.map((artisan) => (
+            <div className="col-md-4" key={artisan.id}>
+              <div className="card mb-4">
+                <div className="card-body">
+                  <h5 className="card-title">{artisan.name}</h5>
+                  <p className="card-text">
+                    Spécialité : {artisan.specialty} <br />
+                    Note : {artisan.note} <br />
+                    Location : {artisan.location} <br />
+                    {artisan.about}
+                  </p>
                 </div>
               </div>
             </div>
-            {/* Slide du troisième artisan du mois */}
-            <div className="carousel-item">
-              <div class="card mb-3" style={{ maxwidth: "540px" }}>
-                <div class="row g-0">
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">
-                        This is a wider card with supporting text below as a
-                        natural lead-in to additional content. This content is a
-                        little bit longer.
-                      </p>
-                      <p class="card-text">
-                        <small class="text-body-secondary">
-                          Last updated 3 mins ago
-                        </small>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <button
-            className="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="prev"
-          >
-            <span
-              className="carousel-control-prev-icon"
-              aria-hidden="true"
-            ></span>
-            <span className="visually-hidden">Previous</span>
-          </button>
-          <button
-            className="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="next"
-          >
-            <span
-              className="carousel-control-next-icon"
-              aria-hidden="true"
-            ></span>
-            <span className="visually-hidden">Next</span>
-          </button>
+          ))}
         </div>
       </main>
       <footer>

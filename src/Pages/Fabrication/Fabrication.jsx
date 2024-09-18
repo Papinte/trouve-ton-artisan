@@ -1,5 +1,6 @@
-import Header from '../../Component/Header/Header';
-import Footer from '../../Component/Footer/Footer';
+import Header from "../../Component/Header/Header";
+import Footer from "../../Component/Footer/Footer";
+import ArtisanCard from "../../Component/ArtisanCard/ArtisanCard";
 
 const Fabrication = () => {
   return (
@@ -8,7 +9,10 @@ const Fabrication = () => {
         <Header />
       </header>
       <main>
-      <h1>Fabrication</h1>
+        <div className="container">
+          <h1>Artisans du Bâtiment</h1>
+          <ArtisanCard category="Fabrication" />
+        </div>
       </main>
       <footer>
         <Footer />

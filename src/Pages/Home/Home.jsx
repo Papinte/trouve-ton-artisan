@@ -1,8 +1,30 @@
 import Header from "../../Component/Header/Header";
 import Footer from "../../Component/Footer/Footer";
+import { useState, useEffect } from "react";
 import "./Home.css";
 
 const Home = () => {
+  const [topArtisans, setTopArtisans] = useState([]);
+
+  useEffect(() => {
+    // Récupération des artisans depuis le fichier JSON
+    fetch("/datas.json")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("La réponse du réseau n'a pas abouti");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        // Filtrer les artisans avec top: true
+        const topArtisansData = data.filter((artisan) => artisan.top === true);
+        setTopArtisans(topArtisansData);
+      })
+      .catch((error) =>
+        console.error("Erreur lors de la récupération des données :", error)
+      );
+  }, []);
+
   return (
     <div>
       <header>
@@ -13,7 +35,7 @@ const Home = () => {
         <div className="row">
           {/* Card 1 */}
           <div className="col-12 col-md-6 col-lg-6 mb-3">
-            <div className="card h-100">
+            <div className="card-home card h-100">
               <div className="row g-0">
                 <div className="col-3 col-md-4">
                   <img
@@ -24,7 +46,7 @@ const Home = () => {
                 </div>
                 <div className="col-9 col-md-8 d-flex align-items-center">
                   <div className="card-body">
-                    <p className="card-title">
+                    <p className="home-title-card card-title">
                       1. Choisir la catégorie d’artisanat dans le menu.
                     </p>
                   </div>
@@ -35,7 +57,7 @@ const Home = () => {
 
           {/* Card 2 */}
           <div className="col-12 col-md-6 col-lg-6 mb-3">
-            <div className="card h-100">
+            <div className="card-home card h-100">
               <div className="row g-0">
                 <div className="col-3 col-md-4">
                   <img
@@ -46,7 +68,7 @@ const Home = () => {
                 </div>
                 <div className="col-9 col-md-8 d-flex align-items-center">
                   <div className="card-body">
-                    <p className="card-title">2. Choisir un artisan</p>
+                    <p className="home-title-card  card-title">2. Choisir un artisan</p>
                   </div>
                 </div>
               </div>
@@ -55,7 +77,7 @@ const Home = () => {
 
           {/* Card 3 */}
           <div className="col-12 col-md-6 col-lg-6 mb-3">
-            <div className="card h-100">
+            <div className="card-home card h-100">
               <div className="row g-0">
                 <div className="col-3 col-md-4">
                   <img
@@ -66,7 +88,7 @@ const Home = () => {
                 </div>
                 <div className="col-9 col-md-8 d-flex align-items-center">
                   <div className="card-body">
-                    <p className="card-title">
+                    <p className="home-title-card card-title">
                       3. Le contacter via le formulaire de contact.
                     </p>
                   </div>
@@ -77,7 +99,7 @@ const Home = () => {
 
           {/* Card 4 */}
           <div className="col-12 col-md-6 col-lg-6 mb-3">
-            <div className="card h-100">
+            <div className="card-home card h-100">
               <div className="row g-0">
                 <div className="col-3 col-md-4">
                   <img
@@ -88,7 +110,7 @@ const Home = () => {
                 </div>
                 <div className="col-9 col-md-8 d-flex align-items-center">
                   <div className="card-body">
-                    <p className="card-title">
+                    <p className="home-title-card card-title">
                       4. Une réponse sera apportée sous 48h.
                     </p>
                   </div>
@@ -98,27 +120,24 @@ const Home = () => {
           </div>
         </div>
         <h2 className="my-4 text-center">Les artisans du mois</h2>
-      </main>
-      <div className="col-12 col-md-6 col-lg-6 mb-3">
-            <div className="card h-100">
-              <div className="row g-0">
-                <div className="col-3 col-md-4">
-                  <img
-                    src="/assets/home/Courrier.png"
-                    className="img-fluid"
-                    alt="..."
-                  />
-                </div>
-                <div className="col-9 col-md-8 d-flex align-items-center">
-                  <div className="card-body">
-                    <p className="card-title">
-                      3. Le contacter via le formulaire de contact.
-                    </p>
-                  </div>
+        <div className="row">
+          {topArtisans.map((artisan) => (
+            <div className="col-12 col-md-6 col-lg-4" key={artisan.id}>
+              <div className="card mb-4">
+                <div className="card-body">
+                  <h5 className="card-title">{artisan.name}</h5>
+                  <p className="card-text">
+                    Spécialité : {artisan.specialty} <br />
+                    Note : {artisan.note} <br />
+                    Location : {artisan.location} <br />
+                    {artisan.about}
+                  </p>
                 </div>
               </div>
             </div>
-          </div>
+          ))}
+        </div>
+      </main>
       <footer>
         <Footer />
       </footer>

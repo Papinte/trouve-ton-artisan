@@ -1,5 +1,6 @@
-import Header from '../../Component/Header/Header';
-import Footer from '../../Component/Footer/Footer';
+import Header from "../../Component/Header/Header";
+import Footer from "../../Component/Footer/Footer";
+import ArtisanCard from "../../Component/ArtisanCard/ArtisanCard";
 
 const Alimentation = () => {
   return (
@@ -8,7 +9,10 @@ const Alimentation = () => {
         <Header />
       </header>
       <main>
-      <h1>Alimentation</h1>
+        <div className="container">
+          <h1 className="mt-4">Alimentation</h1>
+            <ArtisanCard category="Alimentation" />
+        </div>
       </main>
       <footer>
         <Footer />

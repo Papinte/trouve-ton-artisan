@@ -2,6 +2,7 @@ $primary-color: #f1f8fc;
 
 nav{
     background-color: $primary-color;
+    box-shadow: 0 5px 10px -6px rgba(0, 0, 0, 0.3);
 
     .nav-link{
         color: #0074c7;

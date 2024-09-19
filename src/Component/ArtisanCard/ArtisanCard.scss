@@ -1,0 +1,31 @@
+.card {
+  background-color: #f1f8fc;
+  box-shadow: 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  border: none;
+  font: {
+    family: "Graphik", serif;
+    size: 1rem;
+    weight: normal;
+  }
+
+  .card-title {
+    font: {
+      size: 28px;
+      weight: bold;
+    }
+    color: #00497c;
+  }
+  .card-text {
+    color: #0074c7;
+    font: {
+      size: 16px;
+    }
+    .rubrique {
+        color: #00497c;
+        font: {
+            weight:bold;
+        }
+      }
+  }
+}

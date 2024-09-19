@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar, faStarHalfAlt, faStar as faStarEmpty } from '@fortawesome/free-solid-svg-icons';
 import "./ArtisanCard.scss";
 
 function ArtisanCard({ category }) {
@@ -18,16 +20,39 @@ function ArtisanCard({ category }) {
       .catch((error) => console.error("Erreur lors de la récupération des données :", error));
   }, [category]);
 
+  // Fonction pour générer les étoiles en fonction de la note
+  const renderStarRating = (rating) => {
+    const fullStars = Math.floor(rating); // Nombre d'étoiles pleines
+    const decimalPart = rating - fullStars; // Partie décimale de la note
+    const halfStar = decimalPart >= 0.25 && decimalPart < 0.75 ? 1 : 0; // Demi-étoile si entre 0.25 et 0.75
+    const emptyStars = 5 - fullStars - halfStar; // Nombre d'étoiles vides
+
+    return (
+      <div className="star-rating">
+        {/* Afficher les étoiles pleines */}
+        {[...Array(fullStars)].map((_, index) => (
+          <FontAwesomeIcon key={index} icon={faStar} style={{ color: "#ffc107" }} />
+        ))}
+        {/* Afficher une demi-étoile si nécessaire */}
+        {halfStar === 1 && <FontAwesomeIcon icon={faStarHalfAlt} style={{ color: "#ffc107" }} />}
+        {/* Afficher les étoiles vides */}
+        {[...Array(emptyStars)].map((_, index) => (
+          <FontAwesomeIcon key={index} icon={faStarEmpty} style={{ color: "#e4e5e9" }} />
+        ))}
+      </div>
+    );
+  };
+
   return (
-    <div className="row">
+    <div className="row my-5">
       {artisans.map((artisan) => (
-        <div className="col-md-4" key={artisan.id}>
+        <div className="col-12 col-md-6 col-lg-4" key={artisan.id}>
           <div className="card mb-4">
             <div className="card-body">
               <h5 className="card-title">{artisan.name}</h5>
               <article>
                 <p className="card-text"><span className="rubrique">Spécialité : </span>{artisan.specialty}</p>
-                <p className="card-text"><span className="rubrique">Note : </span>{artisan.note}</p>
+                <p className="card-text"><span className="rubrique">Note : </span>{renderStarRating(parseFloat(artisan.note))}</p>
                 <p className="card-text"><span className="rubrique">Location : </span>{artisan.location}</p>
                 <p className="card-text">{artisan.about}</p>
               </article>

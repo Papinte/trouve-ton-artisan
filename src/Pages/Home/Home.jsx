@@ -122,7 +122,7 @@ const Home = () => {
         <h2 className="my-4 text-center">Les artisans du mois</h2>
         <div className="row">
           {topArtisans.map((artisan) => (
-            <div className="col-md-4" key={artisan.id}>
+            <div className="col-12 col-md-6 col-lg-4" key={artisan.id}>
               <div className="card mb-4">
                 <div className="card-body">
                   <h5 className="card-title">{artisan.name}</h5>

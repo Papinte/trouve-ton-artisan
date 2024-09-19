@@ -49,10 +49,10 @@ function ArtisanCard({ category }) {
         <div className="col-12 col-md-6 col-lg-4" key={artisan.id}>
           <div className="card mb-4">
             <div className="card-body">
-              <h5 className="card-title">{artisan.name}</h5>
+              <h5 className="card-title">{artisan.name} </h5>
+              <p className="card-text"><span className="rubrique"></span>{renderStarRating(parseFloat(artisan.note))}</p>
               <article>
                 <p className="card-text"><span className="rubrique">Spécialité : </span>{artisan.specialty}</p>
-                <p className="card-text"><span className="rubrique">Note : </span>{renderStarRating(parseFloat(artisan.note))}</p>
                 <p className="card-text"><span className="rubrique">Location : </span>{artisan.location}</p>
                 <p className="card-text">{artisan.about}</p>
               </article>

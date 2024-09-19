@@ -10,7 +10,7 @@ const Service = () => {
       </header>
       <main>
         <div className="container">
-          <h1>Artisans du Bâtiment</h1>
+          <h1 className="mt-4">Services</h1>
           <ArtisanCard category="Services" />
         </div>
       </main>

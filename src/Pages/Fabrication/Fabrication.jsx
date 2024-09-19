@@ -10,7 +10,7 @@ const Fabrication = () => {
       </header>
       <main>
         <div className="container">
-          <h1>Artisans du Bâtiment</h1>
+          <h1 className="mt-4">Fabrication</h1>
           <ArtisanCard category="Fabrication" />
         </div>
       </main>

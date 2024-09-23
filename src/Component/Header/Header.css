@@ -3,7 +3,6 @@ nav {
   box-shadow: 0 5px 10px -6px rgba(0, 0, 0, 0.3);
   font-family: "Graphik", serif;
   font-size: 1rem;
-  font-weight: normal;
 }
 nav .nav-link {
   color: #0074c7;
@@ -14,11 +13,32 @@ nav .nav-link.active {
 nav .navbar-toggler {
   color: #0074c7;
 }
+nav .artisan-results {
+  border-radius: 15px;
+  background-color: #f1f8fc;
+  border: 0.5px solid #ccc;
+  z-index: 1000;
+  max-height: 400px;
+  overflow-y: auto;
+}
+nav .artisan-card {
+  padding: 10px;
+  border-bottom: 1px solid #384050;
+}
+nav .artisan-card:last-child {
+  border-bottom: none;
+}
 
 @media (min-width: 993px) {
   .logo-tta {
     width: 180px;
     height: auto;
+  }
+  .artisan-results {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: calc(50% - 40px);
   }
 }
 @media (max-width: 992px) {
@@ -26,11 +46,21 @@ nav .navbar-toggler {
     width: 140px;
     height: auto;
   }
+  .artisan-results {
+    position: static;
+    width: 100%;
+    max-height: 300px;
+  }
 }
 @media (max-width: 768px) {
   .logo-tta {
     width: 120px;
     height: auto;
+  }
+  .artisan-results {
+    position: static;
+    width: 100%;
+    max-height: 200px;
   }
 }
 

@@ -23,7 +23,7 @@ const Header = () => {
   const filteredArtisans = datas.filter(
     (artisan) =>
       (artisan.name && artisan.name.toLowerCase().includes(searchTerm.toLowerCase())) ||
-      (artisan.speciality && artisan.speciality.toLowerCase().includes(searchTerm.toLowerCase())) ||
+      (artisan.specialty && artisan.specialty.toLowerCase().includes(searchTerm.toLowerCase())) ||
       (artisan.location && artisan.location.toLowerCase().includes(searchTerm.toLowerCase()))
   );
 
@@ -95,7 +95,7 @@ const Header = () => {
                 </div>
               ))}
             </div>
-          ) : searchTerm ? (
+          ) : searchTerm.length >= 2 ? (
             <p>Aucun artisan trouvé.</p> // Si la recherche ne trouve aucun résultat
           ) : null}{" "}
           {/* On affiche rien si le champ de recherche est vide */}

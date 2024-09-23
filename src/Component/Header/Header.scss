@@ -16,7 +16,23 @@ nav{
     font: {
         family: 'Graphik', serif;
         size: 1rem;
-        weight: normal;
+    }
+    .artisan-results {
+        border-radius: 15px;
+        background-color: $primary-color;
+        border: 0.5px solid #ccc;
+        z-index: 1000;
+        max-height: 400px;
+        overflow-y: auto;
+    }
+
+    .artisan-card {
+        padding: 10px;
+        border-bottom: 1px solid #384050;
+    }
+
+    .artisan-card:last-child {
+        border-bottom: none;
     }
 }
 
@@ -25,6 +41,12 @@ nav{
         width: 180px;
         height: auto;
     }
+    .artisan-results {
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: calc(50% - 40px);
+    }
 }
 
 @media (max-width: 992px){
@@ -32,11 +54,21 @@ nav{
         width: 140px;
         height: auto;
     }
+    .artisan-results {
+        position: static;
+        width: 100%;
+        max-height: 300px;
+    }
 }
 
 @media (max-width: 768px){
     .logo-tta{
         width: 120px;
         height: auto;
+    }
+    .artisan-results {
+        position: static;
+        width: 100%;
+        max-height: 200px;
     }
 }

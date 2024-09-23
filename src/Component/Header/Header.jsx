@@ -1,4 +1,4 @@
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faBars } from "@fortawesome/free-solid-svg-icons";
 import { useState, useEffect } from "react";
@@ -30,13 +30,13 @@ const Header = () => {
   return (
     <nav className="navbar navbar-expand-lg border-bottom">
       <div className="container">
-        <Link className="navbar-brand" to="/">
+        <NavLink className="navbar-brand" to="/">
           <img
             src="/assets/header/Logo.png"
             className="logo-tta"
             alt="Logo du site"
           />
-        </Link>
+        </NavLink>
         <button
           className="navbar-toggler"
           type="button"

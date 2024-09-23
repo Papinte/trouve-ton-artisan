@@ -1,0 +1,26 @@
+$primary-color: #384050;
+$secondary-color: #00497c;
+
+main{
+    .artisan-page{
+        background-color: #f1f8fc;
+        border-radius: 10px;
+        box-shadow: 0 0px 15px 5px rgba(0, 0, 0, 0.1);
+    }
+    font: {
+        family: "Graphik", serif;
+        size: 1rem;
+        weight: normal;
+      }
+      .name-artisan{
+        color: $primary-color;
+      }
+      .title-artisan{
+        color: $secondary-color;
+        font: {
+            size: 1.3rem;
+            weight: bold;
+        }
+
+      }
+}

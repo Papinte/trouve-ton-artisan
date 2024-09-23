@@ -1,6 +1,11 @@
 import { useState, useEffect } from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar, faStarHalfAlt, faStar as faStarEmpty } from '@fortawesome/free-solid-svg-icons';
+import { NavLink } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faStar,
+  faStarHalfAlt,
+  faStar as faStarEmpty,
+} from "@fortawesome/free-solid-svg-icons";
 import "./ArtisanCard.scss";
 
 function ArtisanCard({ category }) {
@@ -17,7 +22,9 @@ function ArtisanCard({ category }) {
         );
         setArtisans(filteredArtisans);
       })
-      .catch((error) => console.error("Erreur lors de la récupération des données :", error));
+      .catch((error) =>
+        console.error("Erreur lors de la récupération des données :", error)
+      );
   }, [category]);
 
   // Fonction pour générer les étoiles en fonction de la note
@@ -31,13 +38,23 @@ function ArtisanCard({ category }) {
       <div className="star-rating">
         {/* Afficher les étoiles pleines */}
         {[...Array(fullStars)].map((_, index) => (
-          <FontAwesomeIcon key={index} icon={faStar} style={{ color: "#ffc107" }} />
+          <FontAwesomeIcon
+            key={index}
+            icon={faStar}
+            style={{ color: "#ffc107" }}
+          />
         ))}
         {/* Afficher une demi-étoile si nécessaire */}
-        {halfStar === 1 && <FontAwesomeIcon icon={faStarHalfAlt} style={{ color: "#ffc107" }} />}
+        {halfStar === 1 && (
+          <FontAwesomeIcon icon={faStarHalfAlt} style={{ color: "#ffc107" }} />
+        )}
         {/* Afficher les étoiles vides */}
         {[...Array(emptyStars)].map((_, index) => (
-          <FontAwesomeIcon key={index} icon={faStarEmpty} style={{ color: "#e4e5e9" }} />
+          <FontAwesomeIcon
+            key={index}
+            icon={faStarEmpty}
+            style={{ color: "#e4e5e9" }}
+          />
         ))}
       </div>
     );
@@ -47,17 +64,27 @@ function ArtisanCard({ category }) {
     <div className="row my-5">
       {artisans.map((artisan) => (
         <div className="col-12 col-md-6 col-lg-4" key={artisan.id}>
-          <div className="card mb-4">
-            <div className="card-body">
-              <h5 className="card-title">{artisan.name} </h5>
-              <p className="card-text"><span className="rubrique"></span>{renderStarRating(parseFloat(artisan.note))}</p>
-              <article>
-                <p className="card-text"><span className="rubrique">Spécialité : </span>{artisan.specialty}</p>
-                <p className="card-text"><span className="rubrique">Location : </span>{artisan.location}</p>
-                <p className="card-text">{artisan.about}</p>
-              </article>
+          <NavLink to={`/artisan/${artisan.id}`}>
+            <div className="card mb-4">
+              <div className="card-body">
+                <h5 className="card-title">{artisan.name} </h5>
+                <p className="card-text">
+                  <span className="rubrique"></span>
+                  {renderStarRating(parseFloat(artisan.note))}
+                </p>
+                <article>
+                  <p className="card-text">
+                    <span className="rubrique">Spécialité : </span>
+                    {artisan.specialty}
+                  </p>
+                  <p className="card-text">
+                    <span className="rubrique">Location : </span>
+                    {artisan.location}
+                  </p>
+                </article>
+              </div>
             </div>
-          </div>
+          </NavLink>
         </div>
       ))}
     </div>

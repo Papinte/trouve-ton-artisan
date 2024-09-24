@@ -1,25 +1,22 @@
 $primary-color: #f1f8fc;
+$footer-background: #0074c7;
 
+footer {
+  background-color: $footer-background;
+  color: $primary-color;
+  font-family: "Graphik", sans-serif;
+  font-size: 0.8rem;
+  text-align: center;
 
-footer{
-    background-color: #0074c7;
+  .footer-link {
+    color: $primary-color;
+    text-decoration: none;
+  }
+  .footer-link:hover {
+    color: #384050;
+  }
 
-    font: {
-        family: 'Graphik', sans-serif;
-        size: 0.7rem;
-        weight: normal;
-    }
-    .footer-link{
-        color: $primary-color;
-        text-decoration: none;
-    }
-    .footer-link.active{
-        color: #384050;
-    }
-    .footer-link:hover{
-        color: #384050;
-    }
-    address{
-        color: $primary-color;
-    }
+  hr {
+    border: 1px solid lighten($footer-background, 20%); /* Ligne de séparation plus claire */
+  }
 }

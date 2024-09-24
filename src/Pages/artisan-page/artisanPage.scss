@@ -1,0 +1,33 @@
+$primary-color: #384050;
+$secondary-color: #00497c;
+
+main {
+  font: {
+    family: "Graphik", sans-serif;
+  }
+  .artisan-page {
+    background-color: #f1f8fc;
+    border-radius: 10px;
+    box-shadow: 0 0px 15px 5px rgba(0, 0, 0, 0.1);
+  }
+  .name-artisan {
+    color: $primary-color;
+  }
+  .title-artisan {
+    color: $secondary-color;
+    font: {
+      size: 1.3rem;
+      weight: bold;
+    }
+  }
+  .form-label{
+    color: $secondary-color;
+  }
+  .card-form{
+    background-color: #f1f8fc;
+    border-radius: 10px;
+    font: {
+      family: "Graphik", sans-serif;
+    }
+  }
+}

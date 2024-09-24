@@ -9,6 +9,7 @@ import Acces from "./Pages/accessibility/accessibility";
 import Cookies from "./Pages/Cookies/Cookies";
 import PersonalData from "./Pages/Personal-data/PersonalData";
 import LegalNotice from "./Pages/Legal-notices/LegalNotice";
+import ArtisanPage from "./Pages/artisan-page/artisanPage";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/cookies" element={<Cookies />}></Route>
         <Route path="/personalData" element={<PersonalData />}></Route>
         <Route path="/legalNotice" element={<LegalNotice />}></Route>
+        <Route path="/artisan/:id" element={<ArtisanPage />} ></Route>
         <Route path="*" element={<ErrorPage />}></Route>
       </Routes>
     </div>

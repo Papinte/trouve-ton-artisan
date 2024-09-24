@@ -1,32 +1,48 @@
-nav {
+header nav {
   background-color: #f1f8fc;
   box-shadow: 0 5px 10px -6px rgba(0, 0, 0, 0.3);
-  font-family: "Graphik", serif;
+  font-family: "Graphik", sans-serif;
   font-size: 1rem;
 }
-nav .nav-link {
+header nav .nav-link {
   color: #0074c7;
 }
-nav .nav-link.active {
+header nav .nav-link.active {
   color: #384050;
 }
-nav .navbar-toggler {
+header nav .navbar-toggler {
   color: #0074c7;
 }
-nav .artisan-results {
+header nav .artisan-results {
   border-radius: 15px;
   background-color: #f1f8fc;
-  border: 0.5px solid #ccc;
+  border: 0.3px solid #ccc;
   z-index: 1000;
+  width: 400px;
   max-height: 400px;
   overflow-y: auto;
-}
-nav .artisan-card {
   padding: 10px;
-  border-bottom: 1px solid #384050;
 }
-nav .artisan-card:last-child {
-  border-bottom: none;
+header nav .artisan-results a {
+  text-decoration: none;
+  color: #0074c7;
+}
+header nav .artisan-results a .card-rubrique {
+  color: #00497c;
+  font-weight: bold;
+}
+header nav .artisan-results p {
+  line-height: 1;
+}
+header nav .artisan-results a:hover {
+  color: #384050;
+}
+header nav .artisan-results a:hover .card-rubrique {
+  color: #384050;
+}
+header nav .artisan-card {
+  margin: 3px 0 3px 0;
+  border-bottom: 1px solid #0074c7;
 }
 
 @media (min-width: 993px) {

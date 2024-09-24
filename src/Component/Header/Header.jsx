@@ -22,9 +22,12 @@ const Header = () => {
 
   const filteredArtisans = datas.filter(
     (artisan) =>
-      (artisan.name && artisan.name.toLowerCase().includes(searchTerm.toLowerCase())) ||
-      (artisan.specialty && artisan.specialty.toLowerCase().includes(searchTerm.toLowerCase())) ||
-      (artisan.location && artisan.location.toLowerCase().includes(searchTerm.toLowerCase()))
+      (artisan.name &&
+        artisan.name.toLowerCase().includes(searchTerm.toLowerCase())) ||
+      (artisan.specialty &&
+        artisan.specialty.toLowerCase().includes(searchTerm.toLowerCase())) ||
+      (artisan.location &&
+        artisan.location.toLowerCase().includes(searchTerm.toLowerCase()))
   );
 
   return (
@@ -88,15 +91,29 @@ const Header = () => {
           {searchTerm && filteredArtisans.length > 0 ? (
             <div className="artisan-results">
               {filteredArtisans.map((artisan) => (
-                <div key={artisan.id} className="artisan-card">
-                  <h5>{artisan.name || "Nom inconnu"}</h5>
-                  <p>Spécialité: {artisan.specialty || "Spécialité non renseignée"}</p>
-                  <p>Ville: {artisan.location || "Ville non renseignée"}</p>
-                </div>
+                <NavLink to={`/artisan/${artisan.id}`}>
+                  <div className="artisan-card" key={artisan.id}>
+                    <h5>
+                      <span className="card-rubrique">
+                        {artisan.name || "Nom inconnu"}
+                      </span>
+                    </h5>
+                    <p>
+                      <span className="card-rubrique">Spécialité: </span>
+                      {artisan.specialty || "Spécialité non renseignée"}
+                    </p>
+                    <p>
+                      <span className="card-rubrique">Ville: </span>
+                      {artisan.location || "Ville non renseignée"}
+                    </p>
+                  </div>
+                </NavLink>
               ))}
             </div>
           ) : searchTerm.length >= 2 ? (
-            <p>Aucun artisan trouvé.</p> // Si la recherche ne trouve aucun résultat
+            <p className="artisan-results py-2 text-center">
+              Aucun artisan trouvé.
+            </p> // Si la recherche ne trouve aucun résultat
           ) : null}{" "}
           {/* On affiche rien si le champ de recherche est vide */}
         </div>

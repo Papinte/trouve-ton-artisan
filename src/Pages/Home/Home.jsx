@@ -31,7 +31,7 @@ const Home = () => {
         <Header />
       </header>
       <main className="container">
-        <h1 className="my-4 text-center">Comment trouver mon artisan ?</h1>
+        <h1 className="my-5 text-center">Comment trouver mon artisan ?</h1>
         <div className="row">
           {/* Card 1 */}
           <div className="col-12 col-md-6 col-lg-6 mb-3">

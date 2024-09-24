@@ -1,14 +1,14 @@
 // Variables pour les breakpoints Bootstrap
-$breakpoint-sm: 576px;  // Mobile
-$breakpoint-md: 768px;  // Tablette
-$breakpoint-lg: 992px;  // Desktop
+$breakpoint-sm: 576px; // Mobile
+$breakpoint-md: 768px; // Tablette
+$breakpoint-lg: 992px; // Desktop
 
 $primary-color: #384050;
-main{
-  h1{
+main {
+  h1 {
     color: $primary-color;
   }
-  h2{
+  h2 {
     color: $primary-color;
   }
   .card-home {
@@ -16,23 +16,56 @@ main{
     box-shadow: 0 8px 10px -6px rgba(0, 0, 0, 0.3);
     border-radius: 20px;
     border: none;
-  
-    .home-title-card  {
+
+    .home-title-card {
       // Taille par défaut (mobile)
       font-size: 16px;
       color: #00497c;
-    
+
       // À partir de tablette (>= 768px)
       @media (min-width: $breakpoint-md) {
         font-size: 20px;
       }
-    
+
       // À partir de desktop (>= 992px)
       @media (min-width: $breakpoint-lg) {
         font-size: 24px;
       }
     }
   }
+
+  .structure-top {
+    transition: transform 0.3s ease; /* Durée de l'animation et effet de transition */
+    background-color: #f1f8fc;
+    box-shadow: 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    border: none;
+    font: {
+      family: "Graphik", sans-serif;
+      size: 1rem;
+      weight: normal;
+    }
+    .card-title {
+      font: {
+        size: 28px;
+        weight: bold;
+      }
+      color: #00497c;
+    }
+    .card-text {
+      color: #0074c7;
+      font: {
+        size: 16px;
+      }
+      .rubrique {
+        color: #00497c;
+        font: {
+            weight:bold;
+        }
+      }
+    }
+  }
+  .structure-top:hover{
+    transform: scale(1.05); /* Agrandir de 5% lors du survol */
+  }
 }
-
-

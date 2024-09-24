@@ -1,55 +1,57 @@
 $primary-color: #f1f8fc;
 $secondary-color: #0074c7;
 
-nav {
-  background-color: $primary-color;
-  box-shadow: 0 5px 10px -6px rgba(0, 0, 0, 0.3);
-
-  .nav-link {
-    color: $secondary-color;
-  }
-  .nav-link.active {
-    color: #384050;
-  }
-  .navbar-toggler {
-    color: $secondary-color;
-  }
-  font: {
-    family: "Graphik", sans-serif;
-    size: 1rem;
-  }
-  .artisan-results {
-    border-radius: 15px;
+header {
+  nav {
     background-color: $primary-color;
-    border: 0.3px solid #ccc;
-    z-index: 1000;
-    width: 400px;
-    max-height: 400px;
-    overflow-y: auto;
-    padding: 10px;
-    a {
-      text-decoration: none; /* Enlève le soulignement */
-      color: $secondary-color; /* Hérite de la couleur du parent, ou utilise la couleur actuelle */
-      .card-rubrique{
-        color: #00497c;
-        font: {
-            weight: bold;
-        }
+    box-shadow: 0 5px 10px -6px rgba(0, 0, 0, 0.3);
+
+    .nav-link {
+      color: $secondary-color;
     }
-    }
-    p {
-      line-height: 1;
-    }
-    a:hover {
+    .nav-link.active {
       color: #384050;
-      .card-rubrique{
+    }
+    .navbar-toggler {
+      color: $secondary-color;
+    }
+    font: {
+      family: "Graphik", sans-serif;
+      size: 1rem;
+    }
+    .artisan-results {
+      border-radius: 15px;
+      background-color: $primary-color;
+      border: 0.3px solid #ccc;
+      z-index: 1000;
+      width: 400px;
+      max-height: 400px;
+      overflow-y: auto;
+      padding: 10px;
+      a {
+        text-decoration: none;
+        color: $secondary-color;
+        .card-rubrique {
+          color: #00497c;
+          font: {
+            weight: bold;
+          }
+        }
+      }
+      p {
+        line-height: 1;
+      }
+      a:hover {
         color: #384050;
+        .card-rubrique {
+          color: #384050;
+        }
+      }
     }
+    .artisan-card {
+      margin: 3px 0 3px 0;
+      border-bottom: 1px solid $secondary-color;
     }
-  }
-  .artisan-card {
-    margin: 3px 0 3px 0;
-    border-bottom: 1px solid #000;
   }
 }
 

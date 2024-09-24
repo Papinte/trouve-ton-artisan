@@ -3,9 +3,7 @@ $secondary-color: #00497c;
 
 main {
   font: {
-    family: "Graphik", serif;
-    size: 1rem;
-    weight: normal;
+    family: "Graphik", sans-serif;
   }
   .artisan-page {
     background-color: #f1f8fc;
@@ -24,5 +22,12 @@ main {
   }
   .form-label{
     color: $secondary-color;
+  }
+  .card-form{
+    background-color: #f1f8fc;
+    border-radius: 10px;
+    font: {
+      family: "Graphik", sans-serif;
+    }
   }
 }

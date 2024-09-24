@@ -1,3 +1,4 @@
+@charset "UTF-8";
 main h1 {
   color: #384050;
 }
@@ -23,6 +24,32 @@ main .card-home .home-title-card {
   main .card-home .home-title-card {
     font-size: 24px;
   }
+}
+main .structure-top {
+  transition: transform 0.3s ease; /* Durée de l'animation et effet de transition */
+  background-color: #f1f8fc;
+  box-shadow: 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  border: none;
+  font-family: "Graphik", sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+}
+main .structure-top .card-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #00497c;
+}
+main .structure-top .card-text {
+  color: #0074c7;
+  font-size: 16px;
+}
+main .structure-top .card-text .rubrique {
+  color: #00497c;
+  font-weight: bold;
+}
+main .structure-top:hover {
+  transform: scale(1.05); /* Agrandir de 5% lors du survol */
 }
 
 /*# sourceMappingURL=Home.css.map */

@@ -1,20 +1,19 @@
-@charset "UTF-8";
-nav {
+header nav {
   background-color: #f1f8fc;
   box-shadow: 0 5px 10px -6px rgba(0, 0, 0, 0.3);
   font-family: "Graphik", sans-serif;
   font-size: 1rem;
 }
-nav .nav-link {
+header nav .nav-link {
   color: #0074c7;
 }
-nav .nav-link.active {
+header nav .nav-link.active {
   color: #384050;
 }
-nav .navbar-toggler {
+header nav .navbar-toggler {
   color: #0074c7;
 }
-nav .artisan-results {
+header nav .artisan-results {
   border-radius: 15px;
   background-color: #f1f8fc;
   border: 0.3px solid #ccc;
@@ -24,26 +23,26 @@ nav .artisan-results {
   overflow-y: auto;
   padding: 10px;
 }
-nav .artisan-results a {
-  text-decoration: none; /* Enlève le soulignement */
-  color: #0074c7; /* Hérite de la couleur du parent, ou utilise la couleur actuelle */
+header nav .artisan-results a {
+  text-decoration: none;
+  color: #0074c7;
 }
-nav .artisan-results a .card-rubrique {
+header nav .artisan-results a .card-rubrique {
   color: #00497c;
   font-weight: bold;
 }
-nav .artisan-results p {
+header nav .artisan-results p {
   line-height: 1;
 }
-nav .artisan-results a:hover {
+header nav .artisan-results a:hover {
   color: #384050;
 }
-nav .artisan-results a:hover .card-rubrique {
+header nav .artisan-results a:hover .card-rubrique {
   color: #384050;
 }
-nav .artisan-card {
+header nav .artisan-card {
   margin: 3px 0 3px 0;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #0074c7;
 }
 
 @media (min-width: 993px) {

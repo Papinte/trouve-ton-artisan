@@ -77,7 +77,7 @@ const ArtisanPage = () => {
     // Si tout est bien rempli, envoyer le message
     setSuccessMessage("Votre message a bien été envoyé.");
 
-    // Réinitialiser les champs après soumission si vous le souhaitez
+    // Réinitialiser les champs après soumission
     setFormData({
       nom: "",
       prenom: "",
@@ -102,7 +102,7 @@ const ArtisanPage = () => {
                 {artisan.specialty}
               </p>
               <p>
-                <span className="title-artisan">Location :</span>{" "}
+                <span className="title-artisan">Ville :</span>{" "}
                 {artisan.location}
               </p>
               <p>

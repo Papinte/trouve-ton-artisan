@@ -1,0 +1,26 @@
+main {
+  font-family: "Graphik", sans-serif;
+}
+main .artisan-page {
+  background-color: #f1f8fc;
+  border-radius: 10px;
+  box-shadow: 0 0px 15px 5px rgba(0, 0, 0, 0.1);
+}
+main .name-artisan {
+  color: #384050;
+}
+main .title-artisan {
+  color: #00497c;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+main .form-label {
+  color: #00497c;
+}
+main .card-form {
+  background-color: #f1f8fc;
+  border-radius: 10px;
+  font-family: "Graphik", sans-serif;
+}
+
+/*# sourceMappingURL=artisanPage.css.map */

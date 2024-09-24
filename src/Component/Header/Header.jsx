@@ -17,9 +17,10 @@ const Header = () => {
 
   // Fonction pour mettre à jour le terme de recherche
   const handleSearchChange = (e) => {
-    setSearchTerm(e.target.value); // Mise à jour le terme de recherche
+    setSearchTerm(e.target.value);
   };
 
+  //Filtrage des artisans en fonction de la recherche
   const filteredArtisans = datas.filter(
     (artisan) =>
       (artisan.name &&
@@ -66,7 +67,7 @@ const Header = () => {
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link" to="/fabrication">
-                  Fabrications
+                  Fabrication
                 </NavLink>
               </li>
               <li className="nav-item">
@@ -82,13 +83,14 @@ const Header = () => {
                 placeholder="Recherche"
                 aria-label="Recherche"
                 value={searchTerm} // La valeur du champ correspond au state `searchTerm`
-                onChange={handleSearchChange} // On capture chaque changement dans la recherche
+                onChange={handleSearchChange} //capture du changement dans la recherche
               ></input>
               <button className="btn btn-outline-primary" type="submit">
                 {/*Balise pour l'icone loupe du bouton de recherche */}
                 <FontAwesomeIcon icon={faSearch} />
               </button>
             </form>
+            {/* Affichage des résultats de recherche */}
             {searchTerm && filteredArtisans.length > 0 ? (
               <div className="artisan-results">
                 {filteredArtisans.map((artisan) => (
@@ -115,8 +117,7 @@ const Header = () => {
               <p className="artisan-results py-2 text-center">
                 Aucun artisan trouvé.
               </p> // Si la recherche ne trouve aucun résultat
-            ) : null}{" "}
-            {/* On affiche rien si le champ de recherche est vide */}
+            ) : null}
           </div>
         </div>
       </nav>

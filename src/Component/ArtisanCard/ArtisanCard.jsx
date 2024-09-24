@@ -64,20 +64,22 @@ function ArtisanCard({ category }) {
     <div className="row my-5">
       {artisans.map((artisan) => (
         <div className="col-12 col-md-6 col-lg-4" key={artisan.id}>
+          {/*Lien vers la page de l'artisan selon le clique grace à l'ID */}
           <NavLink to={`/artisan/${artisan.id}`}>
             <div className="card stucture mb-4">
               <div className="card-body">
                 <h5 className="card-title">{artisan.name} </h5>
-                <p className="card-text">
+                <div className="card-text">
+                  {/* Affichage de la note sous forme d'étoiles. */}
                   {renderStarRating(parseFloat(artisan.note))}
-                </p>
+                </div>
                 <article>
                   <p className="card-text">
                     <span className="rubrique">Spécialité : </span>
                     {artisan.specialty}
                   </p>
                   <p className="card-text">
-                    <span className="rubrique">Location : </span>
+                    <span className="rubrique">Ville : </span>
                     {artisan.location}
                   </p>
                 </article>

@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch, faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { useState, useEffect } from "react";
 import "./Header.css";
 
@@ -85,10 +85,6 @@ const Header = () => {
                 value={searchTerm} // La valeur du champ correspond au state `searchTerm`
                 onChange={handleSearchChange} //capture du changement dans la recherche
               ></input>
-              <button className="btn btn-outline-primary" type="submit">
-                {/*Balise pour l'icone loupe du bouton de recherche */}
-                <FontAwesomeIcon icon={faSearch} />
-              </button>
             </form>
             {/* Affichage des résultats de recherche */}
             {searchTerm && filteredArtisans.length > 0 ? (

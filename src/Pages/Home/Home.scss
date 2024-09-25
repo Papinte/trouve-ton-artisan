@@ -5,6 +5,9 @@ $breakpoint-lg: 992px; // Desktop
 
 $primary-color: #384050;
 main {
+  font: {
+    family: "Graphik", sans-serif;
+  }
   h1 {
     color: $primary-color;
   }
@@ -60,12 +63,12 @@ main {
       .rubrique {
         color: #00497c;
         font: {
-            weight:bold;
+          weight: bold;
         }
       }
     }
   }
-  .structure-top:hover{
+  .structure-top:hover {
     transform: scale(1.05); /* Agrandir de 5% lors du survol */
   }
 }

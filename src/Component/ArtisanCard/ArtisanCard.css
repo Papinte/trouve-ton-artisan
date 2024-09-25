@@ -1,0 +1,33 @@
+.stucture {
+  transition: transform 0.3s ease;
+  background-color: #f1f8fc;
+  box-shadow: 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  border: none;
+  font-family: "Graphik", sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+}
+.stucture .card-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #00497c;
+}
+.stucture .card-text {
+  color: #0074c7;
+  font-size: 16px;
+}
+.stucture .card-text .rubrique {
+  color: #00497c;
+  font-weight: bold;
+}
+
+.stucture:hover {
+  transform: scale(1.05); /* Agrandir de 5% lors du survol */
+}
+
+a {
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=ArtisanCard.css.map */

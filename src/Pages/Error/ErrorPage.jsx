@@ -23,10 +23,12 @@ const ErrorPage = () => {
         </div>
         <div className="text-center">
           <p className="error-text mt-5">
-          Oops ! La page que vous cherchez semble introuvable.
+            Oops ! La page que vous cherchez semble introuvable.
           </p>
           <NavLink to="/">
-          <button type="button" class="btn mb-5">Accueil</button>
+            <button type="button" class="btn mb-5">
+              Accueil
+            </button>
           </NavLink>
         </div>
       </main>

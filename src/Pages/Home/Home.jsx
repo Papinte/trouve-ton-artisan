@@ -49,7 +49,7 @@ const Home = () => {
             style={{ color: "#ffc107" }}
           />
         ))}
-        {/* Afficher une demi-étoile si nécessaire */}
+        {/* Afficher une demi-étoile*/}
         {halfStar === 1 && (
           <FontAwesomeIcon icon={faStarHalfAlt} style={{ color: "#ffc107" }} />
         )}
@@ -109,7 +109,7 @@ const Home = () => {
                 <div className="col-9 col-md-8 d-flex align-items-center">
                   <div className="card-body">
                     <p className="home-title-card  card-title">
-                      2. Choisir un artisan
+                      2. Choisir un artisan.
                     </p>
                   </div>
                 </div>
@@ -169,14 +169,15 @@ const Home = () => {
                 <div className="structure-top card my-4">
                   <div className="card-body">
                     <h5 className="card-title">{artisan.name}</h5>
-                    <p className="card-text">
-                      <span className="rubrique">Spécialité : </span>{artisan.specialty}
-                    </p>
-                    <p className="card-text">
+                    <div className="card-text">
                       {renderStarRating(parseFloat(artisan.note))}
+                    </div>
+                    <p className="card-text">
+                      <span className="rubrique">Spécialité : </span>
+                      {artisan.specialty}
                     </p>
                     <p className="card-text">
-                      <span className="rubrique">Location : </span>
+                      <span className="rubrique">Ville : </span>
                       {artisan.location}{" "}
                     </p>
                   </div>

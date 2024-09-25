@@ -19,12 +19,14 @@ function App() {
         <Route path="/batiment" element={<Batiment />}></Route>
         <Route path="/service" element={<Service />}></Route>
         <Route path="/fabrication" element={<Fabrication />}></Route>
-        <Route path="/alimentation" element={ <Alimentation />}> </Route>
+        <Route path="/alimentation" element={<Alimentation />}>
+          {" "}
+        </Route>
         <Route path="/acces" element={<Acces />}></Route>
         <Route path="/cookies" element={<Cookies />}></Route>
         <Route path="/personalData" element={<PersonalData />}></Route>
         <Route path="/legalNotice" element={<LegalNotice />}></Route>
-        <Route path="/artisan/:id" element={<ArtisanPage />} ></Route>
+        <Route path="/artisan/:id" element={<ArtisanPage />}></Route>
         <Route path="*" element={<ErrorPage />}></Route>
       </Routes>
     </div>

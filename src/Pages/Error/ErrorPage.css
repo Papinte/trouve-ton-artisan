@@ -1,0 +1,74 @@
+main h1 {
+  color: #384050;
+}
+main h2 {
+  color: #384050;
+}
+main .error-text {
+  color: #00497c;
+}
+main .btn:hover {
+  background-color: #384050;
+  color: #f1f8fc;
+}
+
+@media (min-width: 993px) {
+  h1 {
+    font-weight: bold;
+    font-size: 3rem;
+  }
+  .error-text {
+    font-size: 2rem;
+  }
+  .outil-img {
+    max-width: 600px;
+  }
+  .btn {
+    background-color: #0074c7;
+    color: #f1f8fc;
+    padding: 10px 30px;
+    font-size: 1.25rem;
+  }
+}
+@media (max-width: 992px) {
+  h1 {
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  .error-text {
+    font-size: 1.5rem;
+  }
+  .outil-img {
+    max-width: 400px;
+  }
+  .btn {
+    background-color: #0074c7;
+    color: #f1f8fc;
+    padding: 8px 16px;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  h1 {
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  .error-text {
+    font-size: 1rem;
+  }
+  .outil-img {
+    max-width: 300px;
+  }
+  .btn {
+    padding: 6px 12px;
+    font-size: 0.875rem;
+  }
+}
+
+/*# sourceMappingURL=ErrorPage.css.map */

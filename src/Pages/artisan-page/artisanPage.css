@@ -6,6 +6,9 @@ main .artisan-page {
   border-radius: 10px;
   box-shadow: 0 0px 15px 5px rgba(0, 0, 0, 0.1);
 }
+main .artisan-page p {
+  color: #0074c7;
+}
 main .name-artisan {
   color: #384050;
 }

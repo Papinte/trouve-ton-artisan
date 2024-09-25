@@ -8,7 +8,7 @@ Pour rendre le contact encore plus simple, un formulaire est disponible pour per
 
 Avant de commencer, assurez-vous d'avoir installé les éléments suivants :
 
-- [Node.js](https://nodejs.org/) (version 14 ou supérieure)
+- [Node.js](https://nodejs.org/)
 - [npm](https://www.npmjs.com/) (généralement installé avec Node.js)
 - [Sass](https://sass-lang.com/) (pour le prétraitement CSS)
 - [React](https://reactjs.org/) et [Bootstrap](https://getbootstrap.com/)
